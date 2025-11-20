@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Backend Serving Cho AI Model</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mermaid-container {
+            background-color: #f8fafc;
+            border-radius: 0.5rem;
+            overflow: auto;
+        }
+        /* Tùy chỉnh màu sắc cho các node trong mermaid nếu cần qua theme variables */
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-800 mb-2">Hệ Thống Hóa Backend Serving AI</h1>
+            <p class="text-gray-600 text-lg">Phân tích lựa chọn thư viện cho LLM & Vision Models</p>
+        </header>
+
+        <!-- Mermaid Mindmap -->
+        <div class="bg-white shadow-lg rounded-xl p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4 text-gray-700 border-b pb-2">Sơ Đồ Tư Duy (Mind Map)</h2>
+            <div class="mermaid-container flex justify-center p-4">
+                <pre class="mermaid">
+mindmap
+  root((Hệ Thống Serving<br/>AI Model))
+    Requirements(Yêu cầu cốt lõi)
+      HTTP_Async(Xử lý HTTP & Async/Await)
+      AI_Integration(Tích hợp PyTorch/TensorFlow)
+      Resource_Mgmt(Quản lý GPU/RAM & Vòng đời)
+      Inference_Opt(Tối ưu hóa Inference)
+      Preference(Mã nguồn mở & Hiệu suất cao)
+    
+    Solutions(Giải pháp & Thư viện)
+      FastAPI_Stack(FastAPI + Uvicorn)
+        ::icon(fa fa-star)
+        Uu_diem(Rất nhanh, Async native, Auto docs)
+        Phu_hop(Lựa chọn hàng đầu, linh hoạt, dễ học)
+        Use_case(Xây dựng API Endpoint, chạy Local)
+      Ray_Serve(Ray Serve)
+        Uu_diem(Scaling ngang, Multi-model, Load balancing)
+        Phu_hop(Hệ thống lớn, phức tạp)
+      Framework_Specific(TorchServe / TF Serving)
+        Uu_diem(Tối ưu chuyên biệt cho 1 Framework)
+        Phu_hop(Chỉ dùng thuần PyTorch hoặc TF)
+      BentoML(BentoML)
+        Uu_diem(Chuẩn hóa MLOps, đóng gói dễ)
+        Phu_hop(Tập trung vào Model, ít config server)
+
+    Optimization(Kỹ thuật Tối ưu Nâng cao)
+      Engines(vLLM, TGI, ONNX Runtime)
+      Techniques(Model Parallelism, Quantization)
+                </pre>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-2 italic">*Biểu đồ thể hiện sự phân nhánh từ yêu cầu đến các giải pháp cụ thể*</p>
+        </div>
+
+        <!-- Detailed Breakdown -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Left Column: Recommendation -->
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg shadow-sm">
+                <h3 class="text-xl font-bold text-blue-800 mb-3">🏆 Khuyến nghị hàng đầu: FastAPI + Uvicorn</h3>
+                <p class="text-gray-700 mb-4">
+                    Đây là "cặp đôi hoàn hảo" cho nhu cầu của bạn vì nó cân bằng giữa <strong>hiệu suất</strong>, <strong>sự đơn giản</strong> và <strong>khả năng kiểm soát</strong>.
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>FastAPI:</strong> Viết logic xử lý, load model, định nghĩa input/output.</li>
+                    <li><strong>Uvicorn:</strong> Server ASGI để chạy ứng dụng, xử lý các kết nối async cực nhanh.</li>
+                    <li>Dễ dàng tích hợp thêm các engine như <em>ONNX</em> hay <em>vLLM</em> sau này.</li>
+                </ul>
+            </div>
+
+            <!-- Right Column: Alternatives -->
+            <div class="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Khi nào nên chọn giải pháp khác?</h3>
+                <div class="space-y-4">
+                    <div>
+                        <span class="font-semibold text-purple-600">Ray Serve:</span>
+                        <span class="text-gray-600"> Khi bạn cần chạy 10 mô hình cùng lúc và tự động chia tải giữa các GPU/Server.</span>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-orange-600">TorchServe:</span>
+                        <span class="text-gray-600"> Khi công ty bạn cấm dùng gì khác ngoài hệ sinh thái chính chủ của PyTorch.</span>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-green-600">BentoML:</span>
+                        <span class="text-gray-600"> Khi bạn muốn đóng gói model thành Docker container nhanh nhất có thể ("bento").</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            securityLevel: 'loose',
+            themeVariables: {
+                primaryColor: '#dbeafe', // blue-100
+                primaryTextColor: '#1e3a8a', // blue-900
+                primaryBorderColor: '#2563eb', // blue-600
+                lineColor: '#64748b', // slate-500
+                secondaryColor: '#f3e8ff', // purple-100
+                tertiaryColor: '#fff7ed' // orange-100
+            }
+        });
+    </script>
+</body>
+</html>
