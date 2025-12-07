@@ -11,6 +11,8 @@
  truyền tahm chieu  call by reference, tránh để tham chiếu đến const 
 
 - các tham số mặc định phải được đặt ở cuối danh sách 
+- hàm tahm chiếu global
+-hàm con trỏ 
 - hàm inline
 - hàm đẹ quy
     phải có base case để dừng đệ quy 
@@ -22,7 +24,7 @@
 - hàm mãu template với tahm số biến dỏi variadic template
     dẽ mở rộng , linh hoạt , hỗ trợ nhiều kiểu dữ liệu
 
-- lôz:
+- lôi:
     truyen khong khop data type
     tham so mac dinh dat  trước
     định nghia tham số biển đỏi sai 
@@ -46,3 +48,25 @@
 tail recurrsion
 memoizasion
 */
+
+/*
+con trỏ -> nó nhảy đwojc đên ô bát kì nhờ đại chỉ  
+con trỏ cũng có thể xem ké giá trị , địa chỉ của mấy nhà lân cận  -> gọi là con trỏ mảng 
+
+
+*/
+
+
+/*
+Function  
+- nạp chồng hàm  overload nó không chỉ trong oop mà nó còn trong script thông thường
+
+- hàm truyền tham chiếu  , tham số mặc định , hàm truyền  tham trị
+- trong OOP thì có nạp chồng hàm overide từ hàm của class cha  , nếu mà contructor or destructor từ cha  
+thì  nó  sẽ chạy contructor của cha trước hay của nó  
+
+- defauilt argument fucntion trong hàm có thể là tham  số mặc định or  là  1 hàm  
+nhung mà nếu overload mà tham số  hàm  mặc định giống nahu thì sẽ gay lỗi  đấy   
+
+*/
+
