@@ -56,10 +56,36 @@ phương thức tĩnh
  chú thích thêm thành viên tính  
  -tập trung sử dụng : thành viên thường trong phương thức tính
 
- -đối với các method tĩnh thì ko cho phép gọi tahfnh viên normal 
- - đói tưởng sử dụng method tỉnh , không khuyến khích , nên dùng class gọi statiuc thì sẽ tốt hơn  1 phần 
+ -đối với các method tĩnh thì ko cho phép gọi thành  viên normal 
+ - object đưuojc sử dụng method tỉnh , không khuyến khích , nên dùng class gọi statiuc thì sẽ tốt hơn  1 phần 
  
+
+ - ứng dụng : quản lí đói tượgn  
+ tài nguyên dùng chung resource , singleton duy nhất , cáu hình toàn cuc 
+ - có thẻ có const static biến hay khong  , có bín to cục static, có cả static pointer nữa để quản lí tàgi nguyên chung
+- dùng trong multihtreading 
  */
+
+
+/*
+method function: hàm thuộc về lớp chứ ko thuộc về đối tượng 
+- hàm static : gọi bằng classname::fucntion()
+- tiét kiệm bộ nhớ : không cần tạo đói tượng  
+- độ an toàn : khong truy cập , không liên qaun đén các tahnh viên not static của class 
+- static function khong sử dụng this vì ko liên qaun đến object
+- static member fucntion có thể kế thừa nhưung khong polimorphism overide hay loading 
+
+*/
+
+/*
+con trỏ this in class , dùng để gọi method tránh xung đột param method
+nếu thuộc tính là con trỏ thì sao 
+trả về chính đối tượgn thì return *this; cho phép gọi nhiều method 
+nhugn mà chúng ta thiết kế class khi nào method nào thì nên trả về con trỏ this chứ 
+nhưung nếu return * this mà là method const ->thì sẽ là const myclass ko thể sữa object
+- trong đa kế thừa thì  this giúp phân biệt nếu các lớp cha có method cùng tên 
+
+*/
 
 /*
 - abstraction : dạng method wrapper  
@@ -78,4 +104,15 @@ code reusability, Logical hierarchy , Easy maintenance
 -> giúp code trở nên linh hoạt -> sử dụng virtaul để cho phép oveeride 
 -> sử dụng overide để chỉ rõ phương thức đc overide 
 
+*/
+
+/*
+- inline funciton : thay thế gọi hàm bằng code logic trực tiếp  
+- trong class thì tát cả method mặc định đã là inline dù ko đăgn kí inline 
+-> tăng tốc gọi method của object
+
+
+- note 
+tối ưu cho thực thi , chậm khi biên dịch trình biên dịch có thể bỏ qua yêu cầu  inline 
+nê dùng cho các hàm nhỏ và đơn giản  
 */
