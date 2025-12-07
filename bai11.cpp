@@ -87,6 +87,22 @@ nhưung nếu return * this mà là method const ->thì sẽ là const myclass k
 
 */
 
+/*HÀM BẠN : cho phép truy cập thuọc tính private từ bên ngoài 
+khác báo   friend function trong class trước pahri truyền vào kiểu của class cho friend fucntion
+dịnh nghĩa bên ngàoi fucntion
+
+đại khái là kahi báo friebnd fucntion bên trong class để mở cổng \
+
+CLASS BẠN  : cho phép tàon bộ tahfnh viên cảu class có quyền truy cập vào private / protected thành viên của class đánh dáu friend 
+chỉ cần tahfnh viên truyền hàm là object của class đánh dầu hàm bjan là dược  ,
+và hàm truy cập vì là friend fucntiuon nên đều định nghãi bên ngoài  
+
+class_name::method(objct đánh dấu friend class ))
+
+cùng có thể dùng friend fucntion  trong temaplte classes 
+*/
+
+
 /*
 - abstraction : dạng method wrapper  
 -> giảm dộ phức tạp  , tăng tích bảo mật , dễ bảo trì 
