@@ -102,6 +102,16 @@ class_name::method(objct đánh dấu friend class ))
 cùng có thể dùng friend fucntion  trong temaplte classes 
 */
 
+/*con trỏ class : cũng như strut , dùng ->
+
+- dùng con trỏ tạo objct độgn bằng new và delete ,
+- nưhugn mà nên dùng smart pointer , nhưung 1 số trường hợp sẽ dùng new del nưhung cần quản lí cẩn thận
+- dugn con trỏ cấp phát đọng  mảng object , nhớ giải phóng bằng delete[]
+
+- dùng tahm chiếu , kahi báo dánh dầu alf tham chiếu  
+*/
+
+
 
 /*
 - abstraction : dạng method wrapper  
